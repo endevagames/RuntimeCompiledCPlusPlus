@@ -111,3 +111,6 @@ xcuserdata
 
 *.vcxproj
 *.filters
+
+#bin
+bin/*

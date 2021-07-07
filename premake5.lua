@@ -2,18 +2,18 @@ project "RuntimeCompiler"
 	kind "StaticLib"
 	language "C++"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin/int/" .. outputdir .. "/%{prj.name}")
+	targetdir (libdir .. "/%{prj.name}")
+	objdir (libdir .. "/%{prj.name}/int")
 
 	files
 	{
-		"Aurora/RuntimeCompiler/**.h",
-		"Aurora/RuntimeCompiler/**.cpp",
+	   "Aurora/RuntimeCompiler/**.h",
+	   "Aurora/RuntimeCompiler/**.cpp",
 	}
 
 	includedirs
 	{
-		"Aurora/RuntimeCompiler/"
+	   "Aurora/RuntimeCompiler/"
 	}
 
 	filter "system:windows"
@@ -39,18 +39,18 @@ project "RuntimeObjectSystem"
 	kind "StaticLib"
 	language "C++"
 	
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin/int/" .. outputdir .. "/%{prj.name}")
+	targetdir (libdir .. "/%{prj.name}")
+	objdir (libdir .. "/%{prj.name}/int")
 	
 	files
 	{
-		"Aurora/RuntimeObjectSystem/**.h",
-		"Aurora/RuntimeObjectSystem/**.cpp",
+	   "Aurora/RuntimeObjectSystem/**.h",
+	   "Aurora/RuntimeObjectSystem/**.cpp",
 	}
 	
 	includedirs
 	{
-		"Aurora/RuntimeObjectSystem/"
+	   "Aurora/RuntimeObjectSystem/"
 	}
 	
 	filter "system:windows"

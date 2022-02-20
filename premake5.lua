@@ -1,7 +1,8 @@
 project "RuntimeCompiler"
 	kind "StaticLib"
 	language "C++"
-
+	location "%{wks.location}/ProjectFiles"
+	
 	targetdir (libdir .. "/%{prj.name}")
 	objdir (libdir .. "/%{prj.name}/int")
 
@@ -38,6 +39,7 @@ project "RuntimeCompiler"
 project "RuntimeObjectSystem"
 	kind "StaticLib"
 	language "C++"
+	location "%{wks.location}/ProjectFiles"
 	
 	targetdir (libdir .. "/%{prj.name}")
 	objdir (libdir .. "/%{prj.name}/int")

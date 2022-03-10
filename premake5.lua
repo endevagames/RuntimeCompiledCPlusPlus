@@ -2,6 +2,7 @@ project "RuntimeCompiler"
 	kind "StaticLib"
 	language "C++"
 	location "%{wks.location}/ProjectFiles"
+	staticruntime "off"
 	
 	targetdir (libdir .. "/%{prj.name}")
 	objdir (libdir .. "/%{prj.name}/int")
@@ -20,13 +21,11 @@ project "RuntimeCompiler"
 	filter "system:windows"
 		systemversion "latest"
 		cppdialect "C++17"
-		staticruntime "On"
 
 	filter "system:linux"
 		pic "On"
 		systemversion "latest"
 		cppdialect "C++17"
-		staticruntime "On"
 
 	filter "configurations:Debug"
 		runtime "Debug"
@@ -40,6 +39,7 @@ project "RuntimeObjectSystem"
 	kind "StaticLib"
 	language "C++"
 	location "%{wks.location}/ProjectFiles"
+	staticruntime "off"
 	
 	targetdir (libdir .. "/%{prj.name}")
 	objdir (libdir .. "/%{prj.name}/int")
@@ -58,13 +58,11 @@ project "RuntimeObjectSystem"
 	filter "system:windows"
 		systemversion "latest"
 		cppdialect "C++17"
-		staticruntime "On"
 	
 	filter "system:linux"
 		pic "On"
 		systemversion "latest"
 		cppdialect "C++17"
-		staticruntime "On"
 	
 	filter "configurations:Debug"
 		runtime "Debug"

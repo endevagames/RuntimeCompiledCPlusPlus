@@ -31,9 +31,22 @@ project "RuntimeCompiler"
 		runtime "Debug"
 		symbols "on"
 
+	filter "configurations:DebugEditor"
+		runtime "Debug"
+		symbols "on"
+		
 	filter "configurations:Release"
 		runtime "Release"
 		optimize "on"
+
+	filter "configurations:ReleaseEditor"
+		runtime "Release"
+		optimize "on"
+
+	filter "configurations:Dist"
+		runtime "Release"
+		optimize "on"
+		symbols "off"
 
 project "RuntimeObjectSystem"
 	kind "StaticLib"
@@ -67,8 +80,20 @@ project "RuntimeObjectSystem"
 	filter "configurations:Debug"
 		runtime "Debug"
 		symbols "on"
-	
+
+	filter "configurations:DebugEditor"
+		runtime "Debug"
+		symbols "on"
+		
 	filter "configurations:Release"
 		runtime "Release"
 		optimize "on"
-	
+
+	filter "configurations:ReleaseEditor"
+		runtime "Release"
+		optimize "on"
+
+	filter "configurations:Dist"
+		runtime "Release"
+		optimize "on"
+		symbols "off"

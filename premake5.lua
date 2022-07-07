@@ -5,7 +5,7 @@ project "RuntimeCompiler"
 	staticruntime "off"
 	
 	targetdir (libdir .. "/%{prj.name}")
-	objdir (libdir .. "/%{prj.name}/int")
+	objdir (intdir .. "/%{prj.name}")
 
 	files
 	{
